@@ -1,0 +1,23 @@
+1.What is ansible ?
+  Open source automation tool used for configuration management appllication deployment and task automation
+
+2.Uses of Ansible
+ Automation
+ Configuration Management
+ Orchestration
+ Security&Compliance
+
+3.Before Ansible
+ There is a puppet,Chef,Salt..
+ 
+ puppet are agent based architecture , It's we need to install the software in Manage node.
+ And we need to learn the new skill for puppet.
+ same for chef also
+
+4. Why Ansible ?.
+ Ansible is Agentless architecture, It's means no need to install nay software on manage node.
+ No need to learn any new skill.
+ Just need to now YAML file
+ 
+
+
