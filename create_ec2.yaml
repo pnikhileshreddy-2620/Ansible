@@ -1,0 +1,25 @@
+---
+- hosts: localhost
+  connection: local
+  vars:
+    subnet: "subnet-01ea404f5000f5ce6"
+  tasks:
+    - name: Launch the EC2 instances
+      amazon.aws.ec2_instance:
+        name: "{{ item.name }}"
+        key_name: "{{ '0331' }}"
+        instance_type: t2.micro
+        security_group: launch-wizard-1
+        region: us-east-1
+        vpc_subnet_id: "{{ subnet }}"
+        network:
+          assign_public_ip: true
+        image_id: "{{ item.image }}"
+      loop:
+        - { image: "ami-084568db4383264d4", name: "a.u manage-node" }
+        - { image: "ami-071226ecf16aa7d96", name: "b.a manage-node" }
+        - { image: "ami-084568db4383264d4", name: "c.u manage-node" }
+
+
+
+
